@@ -237,8 +237,8 @@ aside{
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* Cambia a columna para apilar las tarjetas */
-        width: 100%; /* Ocupar el ancho completo de la pantalla */
-        padding: 10px; /* Agregar un poco de padding */
+        width: 100%; /* Ocupa el ancho completo de la pantalla */
+        padding: 10px; /* Agrega un poco de padding */
     }
 
     .card {
@@ -269,16 +269,12 @@ aside{
 .reseña{
     border: .5px solid white;
     border-radius: .5rem;
+    padding: 1rem;
 }
 
 .reseña p,cite,h3{
     margin-left: 10px;
     margin-top: 3px;
-}
-.reseña cite{
-    margin-top: 10px;
-    align-content: center;
-    text-align: center;
 }
 
 footer{
