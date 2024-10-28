@@ -22,20 +22,7 @@ header {
     background-repeat: no-repeat; /* Evitar que se repita */
 }
 
-footer{
-    background-color: black;
-}
 
-footer p{
-    margin-left: 30px;
-    color: white;
-    font-size: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-footer iframe{
-    margin-left: 30px;
-}
 
 body>h1{
     color: white;
@@ -269,4 +256,42 @@ aside{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.reseñas{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(autofit, 1fr);
+    gap: 5px;
+    margin: 15px;
+}
+
+.reseña{
+    border: .5px solid white;
+    border-radius: .5rem;
+}
+
+.reseña p,cite,h3{
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.reseña cite{
+    margin-top: 10px;
+    align-content: center;
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+}
+
+footer p{
+    margin-left: 30px;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer iframe{
+    margin-left: 30px;
 }
