@@ -1,0 +1,272 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    /*background-color:dimgrey;*/
+    background: radial-gradient(circle,black 10%,   crimson 100%);
+}
+
+body h1{
+    margin-left: 30px;
+}
+
+header {
+    background-image: url("../img/header.jpg");
+    height: 300px;
+    background-position: center;
+    background-size: 100%; /* Ajusta el ancho al 100% y la altura se ajusta automáticamente */
+    background-repeat: no-repeat; /* Evitar que se repita */
+}
+
+footer{
+    background-color: black;
+}
+
+footer p{
+    margin-left: 30px;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer iframe{
+    margin-left: 30px;
+}
+
+body>h1{
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    padding-top: 25px; /* Ajusta este valor según necesites */
+}
+nav > div {
+    text-align: right; /* Alinear el contenido a la derecha */
+}
+
+.menu-header li{
+    list-style-type: none; /* Elimina los puntos */
+    padding: 30;
+    display: inline;
+    margin-top: 20px;
+    margin-right: 15px;   /* Espacio entre los elementos */
+}
+
+.menu-header li:hover a {
+    color: red; /* Color al pasar el mouse */
+}
+
+.menu-header li > a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Cambia el color según sea necesario */
+    font-size: 22px;
+}
+        
+.cart-icon {
+    position: relative; /* Para posicionar el superíndice */
+    display: inline-block; /* Para que el span se posicione relativo al icono */
+}
+
+.item-count {
+    position: absolute; /* Posicionamiento absoluto */
+    top: -5px; /* Ajusta la posición vertical */
+    right: -10px; /* Ajusta la posición horizontal */
+    background-color: red; /* Color de fondo del superíndice */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Para que sea un círculo */
+    width: 20px; /* Ancho del círculo */
+    height: 20px; /* Alto del círculo */
+    display: flex; /* Flexbox para centrar el texto */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+.hamburger {
+    display: none; /* Oculta el botón hamburguesa por defecto */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Tamaño del icono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-header {
+        display: none; /* Oculta el menú */
+        flex-direction: column; /* Cambia a columna */
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del header */
+        left: 0;
+        background: radial-gradient(circle,black 10%,   crimson 100%);
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    }
+
+    .menu-header.show {
+        display: flex; /* Muestra el menú cuando se active */
+    }
+
+    .hamburger {
+        display: block; /* Muestra el botón hamburguesa */
+    }
+}
+
+.marquesina {
+    margin-top:  10px;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    font-size: 24px;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.marquesina h5{
+    animation: scroll 11s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100vw); }
+}
+
+aside{
+    margin-top: 20px;
+    padding-left: 25px;
+    color: white;
+    font-size: xx-large;
+
+}
+
+.lista-sin-puntos-footer {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0;           /* Elimina el padding */
+    padding-top: 30px;
+    margin: 0;   
+    display: flex;
+    justify-content: center;         /* Elimina el margen */
+}
+
+.lista-sin-puntos-footer li {
+    display: inline;       /* Muestra los elementos en línea */
+    margin-right: 15px;   /* Espacio entre los elementos */
+}
+
+.lista-sin-puntos-footer li:last-child {
+    margin-right: 0;      /* Elimina el margen derecho del último elemento */
+}
+
+/* Cambia el color de los íconos al pasar el mouse */
+.lista-sin-puntos-footer li i {
+    color: white; /* Color inicial */
+    transition: color 0.3s; /* Transición suave */
+}
+
+.lista-sin-puntos-footer li:hover i {
+    color: red; /* Color al pasar el mouse */
+}
+
+.copyright {
+    padding: 20px;
+    text-align: center;
+    color: white; /* Color inicial */
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+.producto img {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.info {
+    margin-left: 10px;
+}
+
+.info h3 {
+    font-size: 1.2em; /* Ajusta el tamaño del título */
+    margin: 0; /* Elimina el margen por defecto */
+    color: white;
+}
+
+.info p {
+    margin: 5px 0; /* Espaciado uniforme entre párrafos */
+    color: white;
+}
+
+.info button {
+    margin-top: 5px; /* Espacio entre la descripción y el botón */
+    padding: 5px 10px; /* Espaciado del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.info button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+.container{
+    width: 800px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.container aside{
+    width: 200px;
+}
+.container aside p{
+    font-size: medium;
+}
+.card{
+    height: 300px;
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: 1s all ease;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna para apilar las tarjetas */
+        width: 100%; /* Ocupar el ancho completo de la pantalla */
+        padding: 10px; /* Agregar un poco de padding */
+    }
+
+    .card {
+        height: auto; /* Permitir que la altura sea automática para adaptarse al contenido */
+        margin-bottom: 20px; /* Espaciado entre tarjetas */
+    }
+}
+.card:hover{
+    flex: 4;
+    cursor: pointer;
+    box-shadow: 0 10px 40px black;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

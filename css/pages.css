@@ -1,0 +1,113 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    /*background-color:dimgrey;*/
+    background: radial-gradient(circle,black 10%,   crimson 100%);
+    color: white;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    height: 520px;
+    background-color: black;
+}
+
+body form label{
+    font-size: large;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.input-large {
+    width: 400px;
+    height: 25px;
+}
+
+.input-text-area{
+    width: 800px;
+    height: 400px;
+}
+
+button {
+    margin: 10px 10px 10px 0px; /* Espacio entre la descripción y el botón */
+    padding: 5px 10px; /* Espaciado del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: medium;
+}
+
+footer p{
+    margin-left: 30px;
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer iframe{
+    margin-left: 30px;
+}
+section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%; /* Puedes ajustar el ancho según necesites */
+    text-align: center; /* Centra el texto */
+}
+
+img {
+    max-width: 100%; /* Hace que la imagen no se salga de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px;
+    width: 800px; /* Aumenta el tamaño de la imagen */
+    /* Ajusta el tamaño según sea necesario */
+}
+
+.lista-sin-puntos-footer {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0;           /* Elimina el padding */
+    padding-top: 30px;
+    margin: 0;   
+    display: flex;
+    justify-content: center;         /* Elimina el margen */
+}
+
+.lista-sin-puntos-footer li {
+    display: inline;       /* Muestra los elementos en línea */
+    margin-right: 15px;   /* Espacio entre los elementos */
+}
+
+.lista-sin-puntos-footer li:last-child {
+    margin-right: 0;      /* Elimina el margen derecho del último elemento */
+}
+
+/* Cambia el color de los íconos al pasar el mouse */
+.lista-sin-puntos-footer li i {
+    color: white; /* Color inicial */
+    transition: color 0.3s; /* Transición suave */
+}
+
+.lista-sin-puntos-footer li:hover i {
+    color: red; /* Color al pasar el mouse */
+}
+
+.copyright {
+    padding: 20px;
+    text-align: center;
+    color: white; /* Color inicial */
+}
+
