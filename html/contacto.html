@@ -10,26 +10,16 @@
 <body>
   <div>
     <h1>FORMULARIO DE CONTACTO</h1>
-    <form action="https://formspree.io/f/xvgopydr" method="POST" enctype="multipart/form-data">
+    <form id="myForm" action="https://formspree.io/f/xvgopydr" method="POST" enctype="multipart/form-data">
       <label>Nombre:<input class="input-large" type="text" name="Nombre"></label>
       <label>Email:<input class="input-large" type="email" name="email"></label>
       <label>Mensaje:<textarea class="input-text-area" name="message"></textarea></label>
+      <!-- Contenedor de reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="TU_CLAVE_DE_SITIO"></div>
       <button class="info" type="submit">Enviar</button>
     </form> 
   </div>
     <footer>
-      <div>
-          <p>Nos encontras en...</p>
-          <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.0866022407106!2d-60.73440093371245!3d-32.729991204033084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b65b5cc6d4a8f5%3A0x6337ed11fa574f39!2sFalco%20Celulares!5e0!3m2!1ses-419!2sar!4v1728942514963!5m2!1ses-419!2sar" 
-              width="400" 
-              height="275"
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-      </div>
       <div>
           <ul class="lista-sin-puntos-footer">
               <li>
@@ -52,6 +42,8 @@
                               Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores" target="_blank">ingresá acá</a></h4> 
       </div>   
     </footer> 
+    <!-- Script para cargar Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 
 </html>
