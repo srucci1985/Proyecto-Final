@@ -218,10 +218,26 @@ aside{
     flex-wrap: wrap;
 }
 
-.container aside{
-    width: 200px;
+.container-sub{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;   
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Opcional: agrega un poco de espacio interior */
 }
-.container aside p{
+.container-sub aside{
+    width: 25%;
+}
+.container-sub > div:first-of-type {
+    width: 40%; /* Segunda columna para las sections de productos */
+}
+
+.container-sub > div:last-of-type {
+    width: 30%; /* Tercer columna para el video */
+    margin-right: 100px;
+}
+.container-sub aside p{
     font-size: medium;
 }
 .card{
@@ -246,6 +262,25 @@ aside{
         margin-bottom: 20px; /* Espaciado entre tarjetas */
     }
 }
+/* Consulta de medios para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .container-sub {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .container-sub aside,
+    .container-sub > div:first-of-type,
+    .container-sub > div:last-of-type {
+        width: 100%; /* Hacemos que cada columna ocupe el ancho completo */
+        max-width: 600px; /* Controla el ancho máximo de cada sección */
+    }
+
+    .container-sub > div:last-of-type {
+        margin-top: 20px; /* Agrega un espacio superior para separar el video */
+    }
+}
+
 .card:hover{
     flex: 4;
     cursor: pointer;
