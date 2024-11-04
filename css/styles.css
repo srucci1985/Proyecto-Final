@@ -41,16 +41,14 @@ nav > div {
     text-align: right; /* Alinear el contenido a la derecha */
 }
 
+
 .menu-header li{
     list-style-type: none; /* Elimina los puntos */
     padding: 30;
-    display: inline;
+    display: inline-block;
     margin-top: 20px;
     margin-right: 15px;   /* Espacio entre los elementos */
-}
-
-.menu-header li:hover a {
-    color: red; /* Color al pasar el mouse */
+    position: relative; /* Necesario para que el submenú se posicione relativo a este elemento */
 }
 
 .menu-header li > a {
@@ -58,11 +56,15 @@ nav > div {
     color: white; /* Cambia el color según sea necesario */
     font-size: 22px;
 }
+.menu-header li:hover > a {
+    color: red; /* Color al pasar el mouse */
+}
         
 .cart-icon {
     position: relative; /* Para posicionar el superíndice */
     display: inline-block; /* Para que el span se posicione relativo al icono */
 }
+
 
 .item-count {
     position: absolute; /* Posicionamiento absoluto */
@@ -78,6 +80,35 @@ nav > div {
     align-items: center; /* Centrado vertical */
     font-size: 14px; /* Tamaño del texto */
 }
+/* Estilos para el submenú */
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    text-align: left;
+    top: 100%; /* Alinea el submenú debajo del elemento principal */
+    left: 0;
+    min-width: 120px;
+    background-color:black;
+    border-radius: 10px;
+}
+
+.submenu li a {
+    margin: 3px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    }
+
+/* Muestra el submenú cuando el usuario pasa el cursor sobre el li principal */
+.menu-header li:hover .submenu {
+    display: block;
+}
+
+.submenu li a:hover{
+    color: red;
+}
+
+
 
 .hamburger {
     display: none; /* Oculta el botón hamburguesa por defecto */
@@ -110,6 +141,7 @@ nav > div {
     }
 }
 
+
 .marquesina {
     margin-top:  10px;
     width: 100%;
@@ -122,6 +154,7 @@ nav > div {
 
 .marquesina h5{
     animation: scroll 11s linear infinite;
+    overflow: hidden;
 }
 
 @keyframes scroll {
@@ -235,7 +268,8 @@ aside{
 
 .container-sub > div:last-of-type {
     width: 30%; /* Tercer columna para el video */
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 .container-sub aside p{
     font-size: medium;
