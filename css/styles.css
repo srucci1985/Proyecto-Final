@@ -297,7 +297,7 @@ aside{
     }
 }
 /* Consulta de medios para pantallas más pequeñas */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .container-sub {
         flex-direction: column; /* Apila las columnas verticalmente */
         align-items: center; /* Centra los elementos */
@@ -363,6 +363,15 @@ footer iframe{
     margin-left: 30px;
 }
 
+
+/* Contenedor principal que contiene ambos divs */
+.main-container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos en la parte superior */
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
 .footer-links {
     list-style-type: none; /* Elimina los puntos */
     padding: 0;           /* Elimina el padding */
@@ -384,10 +393,23 @@ footer iframe{
 .footer-links li:hover a {
     color: red; /* Color al pasar el mouse */
 }
-/* Contenedor principal que contiene ambos divs */
-.main-container-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Alinea los elementos en la parte superior */
-    padding: 20px; /* Espacio alrededor del contenido */
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-container-footer {
+        flex-direction: column; /* Cambia a columna para adaptarse */
+        align-items: center; /* Centra los elementos en columnas */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer-links {
+        padding-top: 15px;
+        display: block; /* Cambia el display para una sola columna */
+    }
+
+    .footer-links li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Espacio entre los elementos verticalmente */
+    }
 }
