@@ -154,3 +154,41 @@ img {
     align-items: flex-start; /* Alinea los elementos en la parte superior */
     padding: 20px; /* Espacio alrededor del contenido */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Cambia el layout a columnas en pantallas más pequeñas */
+    .main-container-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    /* Centra el contenido */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .medios {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduce el tamaño de las imágenes de medios de pago/envío */
+    .medios img {
+        width: 40px;
+        height: auto;
+    }
+    
+    /* Ajuste del padding */
+    .main-container-footer {
+        padding: 10px;
+    }
+
+    .footer-links li {
+        margin-right: 0;
+    }
+}
