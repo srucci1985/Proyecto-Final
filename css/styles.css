@@ -59,7 +59,10 @@ nav > div {
 .menu-header li:hover > a {
     color: red; /* Color al pasar el mouse */
 }
-        
+       
+.menu-header li:focus-within .submenu {
+    display: block;
+}
 .cart-icon {
     position: relative; /* Para posicionar el superíndice */
     display: inline-block; /* Para que el span se posicione relativo al icono */
@@ -108,6 +111,9 @@ nav > div {
     color: red;
 }
 
+.submenu li a:focus {
+    outline: 2px solid #ff0000; /* Marca el enlace enfocado */
+}
 
 
 .hamburger {
@@ -236,6 +242,7 @@ aside{
     border: none; /* Sin borde */
     border-radius: 8px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease;
 }
 
 .info button:hover {
@@ -411,5 +418,21 @@ footer iframe{
     .footer-links li {
         margin-right: 0;
         margin-bottom: 10px; /* Espacio entre los elementos verticalmente */
+    }
+}
+/* Ajuste en la fuente de los títulos y el contenido en dispositivos pequeños */
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+    p, cite, a, button {
+        font-size: 1em;
+    }
+    .menu-header li a {
+        font-size: 18px;
+    }
+    .container img, .producto img {
+        width: 100%;
+        height: auto;
     }
 }
