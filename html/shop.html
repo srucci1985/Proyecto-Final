@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Carrito de Compras</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/pages.css">
+    </head>
+    <body>
+      <h1>Lista de Productos</h1>
+        <div class="container">
+          <div class="productos-container" id="productos-container">
+            <!-- Los productos se agregan aquí dinámicamente -->
+          </div>
+          <div id="carrito">
+              <h3>Carrito de Compras</h3>
+              <ul id="carrito-list">
+                <!-- Los productos del carrito se agregan aquí -->
+              </ul>
+              <h4 id="total-carrito">Total: $0.00</h4>
+              <button class="btn-carrito-borrar" onclick="borrarCarrito()">Borrar Carrito</button>
+              <button class="btn-carrito" onclick="verCarrito()">Ver Carrito</button>
+          </div>
+        </div>          
+        <!-- Vinculamos el archivo JS donde se encuentra la función -->
+        <script src="../js/scripts2.js"></script>
+    </body>
+</html>

@@ -192,3 +192,122 @@ img {
         margin-right: 0;
     }
 }
+
+/* Contenedor principal para las dos secciones */
+.container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las dos secciones */
+    flex-wrap: wrap; /* Permite que los elementos se apilen si no hay suficiente espacio */
+    gap: 20px; /* Espacio entre las dos secciones */
+}
+
+/* Estilo para la sección de productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px; /* Espacio entre los productos */
+    flex: 1; /* Hace que la sección de productos ocupe todo el espacio disponible */
+}
+
+/* Estilo para cada producto */
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para la sección del carrito */
+#carrito {
+    background-color: radial-gradient(circle,black 10%,   crimson 100%);;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px; /* Fija el tamaño del carrito */
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Evita que el carrito se reduzca */
+    margin: 20px;
+}
+
+/* Estilo para los productos del carrito */
+#carrito h3 {
+    margin-top: 0;
+}
+
+#carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+#carrito li {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: none;
+    border-style:dashed;
+}
+
+/* Estilo para el botón del carrito */
+.btn-carrito {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.btn-carrito-borrar {
+    background-color: #fc0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* En pantallas pequeñas, las secciones se apilan verticalmente */
+        align-items: center; /* Centra las secciones */
+    }
+
+    #carrito {
+        width: 100%; /* El carrito ocupa todo el ancho disponible */
+        height: auto; /* Deja que el carrito crezca según el contenido */
+        margin-top: 20px; /* Espacio entre la lista de productos y el carrito */
+    }
+
+    .producto {
+        width: 100%; /* Los productos ocupan el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+/* Estilo para el botón de descripción ampliada */
+.btn-descripcion {
+    background-color: #007BFF; /* Un color de fondo para el botón */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de descripción ampliada al pasar el mouse */
+.btn-descripcion:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}

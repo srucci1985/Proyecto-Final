@@ -1,8 +1,7 @@
 const hamburger = document.getElementById('hamburger');
-const menuHeader = document.querySelector('.menu-header');
-
 hamburger.addEventListener('click', () => {
-    menuHeader.classList.toggle('show'); // Agrega o quita la clase 'show'
+  const menuHeader = document.querySelector('.menu-header');
+  menuHeader.classList.toggle('show'); // Agrega o quita la clase 'show'
 });
 
 // Obtener el botón "Añadir al carrito"
@@ -34,3 +33,6 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
         alert("Formulario enviado correctamente.");
     }
 });
+
+
+  
