@@ -339,7 +339,7 @@ aside{
 .reseñas{
     color: white;
     display: grid;
-    grid-template-columns: repeat(autofit, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Establece 3 columnas para pantallas grandes */
     gap: 5px;
     margin: 15px;
 }
@@ -419,6 +419,9 @@ footer iframe{
         margin-right: 0;
         margin-bottom: 10px; /* Espacio entre los elementos verticalmente */
     }
+    .reseñas {
+        grid-template-columns: 1fr; /* Cambia a 1 columna en pantallas pequeñas */
+    }
 }
 /* Ajuste en la fuente de los títulos y el contenido en dispositivos pequeños */
 @media (max-width: 480px) {
@@ -434,5 +437,8 @@ footer iframe{
     .container img, .producto img {
         width: 100%;
         height: auto;
+    }
+    .reseñas {
+        grid-template-columns: 1fr; /* También en pantallas aún más pequeñas, sigue 1 columna */
     }
 }
